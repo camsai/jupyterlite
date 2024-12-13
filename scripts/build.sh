@@ -33,7 +33,7 @@ if [[ -n ${UPDATE_CONTENT} ]]; then
     rm -rf ${CONTENT_DIR} && mkdir -p ${CONTENT_DIR}
 fi
 
-[[ -n ${BUILD} ]] && jupyter lite build --contents ${CONTENT_DIR} --output-dir dist
+[[ -n ${BUILD} ]] && jupyter lite build --contents ${RESOLVED_CONTENT_DIR} --output-dir dist
 
 # Exit with zero (for GH workflow)
 exit 0
